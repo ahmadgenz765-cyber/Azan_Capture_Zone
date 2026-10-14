@@ -1,0 +1,49 @@
+# Decap CMS Configuration for Azan Capture Zone
+
+backend:
+  name: git-gateway
+  branch: main # Default repository branch
+
+media_folder: "frontend/assets/images" # Where media files are stored in the repo
+public_folder: "/assets/images" # Path used in public HTML
+
+collections:
+  # 1. Packages Collection
+  - name: "packages"
+    label: "Packages & Deals"
+    folder: "content/packages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Package Title", name: "title", widget: "string" }
+      - { label: "Price (e.g. PKR 150,000)", name: "price", widget: "string" }
+      - { label: "Price Subtitle (e.g. / 2 Days)", name: "subtitle", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Is Featured/Popular?", name: "featured", widget: "boolean", default: false }
+      - { label: "Included Features", name: "features", widget: "list", field: { label: "Feature", name: "feature", widget: "string" } }
+
+  # 2. Blog Collection
+  - name: "blog"
+    label: "Blog Articles"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Wedding Tips", "Portraiture", "Behind The Scenes", "Events"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Article Body", name: "body", widget: "markdown" }
+
+  # 3. Reviews Collection
+  - name: "reviews"
+    label: "Customer Reviews"
+    folder: "content/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Client Name(s)", name: "client", widget: "string" }
+      - { label: "Shoot Type", name: "shoot_type", widget: "string" }
+      - { label: "Rating (1 to 5 Stars)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+      - { label: "Testimonial Comment", name: "review", widget: "text" }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inquiries — Azan Capture Zone</title>
+  <meta name="description" content="Inquire about dates, pricing, and photography availability with Azan Capture Zone via WhatsApp or direct email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 40px;
+      border-radius: 4px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .contact-item i {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+    }
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: #25D366;
+      color: #ffffff;
+      padding: 16px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition-smooth);
+    }
+    .whatsapp-btn:hover {
+      background-color: #1eb857;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">AZAN <span>CAPTURE ZONE</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Inquire Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section style="margin-top: 80px;">
+    <div class="section-header">
+      <p>Get In Touch</p>
+      <h2>Book Your Session</h2>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-card">
+        <h3>Direct Inquiry</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">For the fastest response regarding date availability and package inquiries, connect with us directly on WhatsApp.</p>
+        
+        <a id="whatsapp-link" href="https://wa.me/923000000000?text=Hello%20Azan%20Capture%20Zone,%20I%20would%20like%20to%20inquire%20about%20booking%20availability." target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Contact Details</h3>
+        <div class="contact-item" style="margin-top: 20px;">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Phone</p>
+            <p style="font-weight: 500;">+92 325 1895854</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Email</p>
+            <p style="font-weight: 500;">azaancapturezone@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Location</p>
+            <p style="font-weight: 500;">Gojra, Toba Tek Singh / Punjab, Pakistan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="copyright">
+      <p>&copy; 2026 Azan Capture Zone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Auto-fill WhatsApp message if URL contains a package query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedPackage = urlParams.get('package');
+    if (selectedPackage) {
+      const waBtn = document.getElementById('whatsapp-link');
+      const text = encodeURIComponent(`Hello Azan Capture Zone, I would like to inquire about booking the ${selectedPackage} package.`);
+      waBtn.href = `https://wa.me/03251895854?text=${text}`;
+    }
+  </script>
+</body>
+</html>

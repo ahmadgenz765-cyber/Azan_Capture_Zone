@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages & Deals — Azan Capture Zone</title>
+  <meta name="description" content="Explore luxury wedding, portrait, and cinematic video packages by Azan Capture Zone. Transparent pricing and customizable options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      align-items: stretch;
+    }
+    .package-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+    .package-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-5px);
+    }
+    .package-card.featured {
+      border-color: var(--accent-gold);
+      background-color: #1f1d18;
+    }
+    .badge {
+      position: absolute;
+      top: -15px;
+      right: 25px;
+      background-color: var(--accent-gold);
+      color: var(--bg-primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+    .package-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .package-price {
+      font-size: 2.2rem;
+      font-family: var(--font-heading);
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+    .package-price span {
+      font-size: 0.9rem;
+      font-family: var(--font-primary);
+      color: var(--text-secondary);
+    }
+    .package-features {
+      list-style: none;
+      margin-bottom: 30px;
+      flex-grow: 1;
+    }
+    .package-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .package-features li i {
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">AZAN <span>CAPTURE ZONE</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="packages.html" class="active">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn">Inquire Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Packages Section -->
+  <section style="margin-top: 80px;">
+    <div class="section-header">
+      <p>Investment & Offerings</p>
+      <h2>Photography & Cinema Packages</h2>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Essential Package -->
+      <div class="package-card">
+        <div>
+          <h3 class="package-title">Portrait Essential</h3>
+          <div class="package-price">PKR 25,000 <span>/ Session</span></div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 25px;">Ideal for outdoor portraits, individual branding, or mini shoots.</p>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> 2 Hours Photo Session</li>
+            <li><i class="fas fa-check"></i> 25 Retouched High-Res Images</li>
+            <li><i class="fas fa-check"></i> Online Private Gallery</li>
+            <li><i class="fas fa-check"></i> 1 Location</li>
+            <li><i class="fas fa-check"></i> Delivery within 5 Days</li>
+          </ul>
+        </div>
+        <a href="contact.html?package=Portrait%20Essential" class="btn" style="text-align: center;">Inquire Package</a>
+      </div>
+
+      <!-- Royal Wedding Package -->
+      <div class="package-card featured">
+        <span class="badge">Most Popular</span>
+        <div>
+          <h3 class="package-title">Royal Wedding</h3>
+          <div class="package-price">PKR 150,000 <span>/ 2 Days</span></div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 25px;">Complete photo & video coverage tailored for luxury weddings.</p>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> 2 Days Full Coverage (Barat & Walima)</li>
+            <li><i class="fas fa-check"></i> Lead Photographer + Drone Operator</li>
+            <li><i class="fas fa-check"></i> Cinematic Video Teaser (3-5 mins)</li>
+            <li><i class="fas fa-check"></i> 300+ Edited High-Res Photos</li>
+            <li><i class="fas fa-check"></i> Premium Custom Photo Album</li>
+          </ul>
+        </div>
+        <a href="contact.html?package=Royal%20Wedding" class="btn btn-solid" style="text-align: center;">Book Royal Package</a>
+      </div>
+
+      <!-- Cinematic Cinema Package -->
+      <div class="package-card">
+        <div>
+          <h3 class="package-title">Cinematic Cinema</h3>
+          <div class="package-price">PKR 85,000 <span>/ Day</span></div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 25px;">Dedicated cinematic video production for events and wedding films.</p>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> Full Day Film Shoot</li>
+            <li><i class="fas fa-check"></i> 4K Camera & Stabilizer Gear</li>
+            <li><i class="fas fa-check"></i> 1-Minute Reel + 8-Min Highlight Film</li>
+            <li><i class="fas fa-check"></i> Licensed Background Music</li>
+            <li><i class="fas fa-check"></i> USB Drive + Online Access</li>
+          </ul>
+        </div>
+        <a href="contact.html?package=Cinematic%20Cinema" class="btn" style="text-align: center;">Inquire Cinema</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Need a custom photography deal?</h3>
+      <p>We tailor custom packages for multi-day events, corporate shoots, and destination weddings.</p>
+      <a href="contact.html" class="btn btn-solid">Request Custom Quote</a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Azan Capture Zone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

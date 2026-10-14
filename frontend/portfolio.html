@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Azan Capture Zone</title>
+  <meta name="description" content="Explore professional photography portfolios including luxury weddings, portraits, and special events.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent-gold);
+      color: var(--text-primary);
+      background-color: rgba(198, 161, 91, 0.1);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      height: 350px;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+    .portfolio-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(18,18,18,0.9), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">AZAN <span>CAPTURE ZONE</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn">Inquire Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section style="margin-top: 80px;">
+    <div class="section-header">
+      <p>Visual Gallery</p>
+      <h2>Our Photography Portfolio</h2>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="wedding">Weddings</button>
+      <button class="filter-btn" data-filter="portrait">Portraits</button>
+      <button class="filter-btn" data-filter="event">Events</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-category="wedding">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Royal Wedding Moment" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Royal Wedding</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Wedding Photography</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="portrait">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Studio Portrait" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Elegance Portrait</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Portrait Session</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="wedding">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Bridal Shoot" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Bridal Grace</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Wedding Photography</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="event">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Cultural Event" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Cultural Night</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Event Coverage</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="portrait">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Gentleman Portrait" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Modern Gentleman</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Portrait Session</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="event">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Live Concert Event" class="gallery-img">
+        <div class="portfolio-overlay">
+          <h3>Stage & Lights</h3>
+          <p style="color: var(--accent-gold); font-size: 0.85rem;">Event Coverage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Love what you see?</h3>
+      <p>Secure your preferred date for your next event or shoot.</p>
+      <a href="contact.html" class="btn btn-solid">Inquire Now</a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Azan Capture Zone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script>
+    // Portfolio Filtering Script
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Videos — Azan Capture Zone</title>
+  <meta name="description" content="Watch high-end cinematic wedding films and video highlights by Azan Capture Zone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 40px;
+    }
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .video-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-info {
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">AZAN <span>CAPTURE ZONE</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="videos.html" class="active">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn">Inquire Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Videos Section -->
+  <section style="margin-top: 80px;">
+    <div class="section-header">
+      <p>Motion Pictures</p>
+      <h2>Cinematic Films</h2>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-container">
+          <!-- Safe placeholder YouTube embed -->
+          <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Cinematic Wedding Teaser" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>The Royal Wedding Teaser</h3>
+          <p>A cinematic storytelling masterpiece capturing heartfelt vows and grand celebration highlights.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Destination Cinematic Film" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Destination Love Story</h3>
+          <p>An immersive visual journey through picturesque landscapes and intimate moments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Want a cinematic film for your event?</h3>
+      <p>Book our combined photography and cinematic video packages today.</p>
+      <a href="contact.html" class="btn btn-solid">Inquire Now</a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Azan Capture Zone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

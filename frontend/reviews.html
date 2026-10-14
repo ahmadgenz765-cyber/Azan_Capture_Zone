@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews — Azan Capture Zone</title>
+  <meta name="description" content="Read testimonials and client experiences from couples and brands who trusted Azan Capture Zone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .review-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 35px;
+      position: relative;
+    }
+    .stars {
+      color: var(--accent-gold);
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+    .review-text {
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+    .client-info h4 {
+      font-size: 1.1rem;
+    }
+    .client-info p {
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">AZAN <span>CAPTURE ZONE</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn">Inquire Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Reviews Section -->
+  <section style="margin-top: 80px;">
+    <div class="section-header">
+      <p>Client Testimonials</p>
+      <h2>What Our Clients Say</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="review-text">"Azan Capture Zone made our wedding photos look like scenes right out of a high-end film. The attention to detail and calm professionalism made working with them an absolute joy!"</p>
+        <div class="client-info">
+          <h4>Hamza & Ayesha</h4>
+          <p>Wedding Shoot</p>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="review-text">"The portrait session was incredibly smooth. They captured exactly the mood and lighting I wanted for my brand profile. Highly recommended!"</p>
+        <div class="client-info">
+          <h4>Bilal Raza</h4>
+          <p>Portrait Session</p>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="review-text">"The cinematic video teaser brought tears to our eyes. Every emotion was captured perfectly. Worth every rupee!"</p>
+        <div class="client-info">
+          <h4>Usman & Zoya</h4>
+          <p>Barat & Cinematic Film</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Ready to share your own experience?</h3>
+      <p>Book your upcoming shoot with Azan Capture Zone today.</p>
+      <a href="contact.html" class="btn btn-solid">Book Now</a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Azan Capture Zone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
